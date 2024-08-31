@@ -1,0 +1,179 @@
+:root{
+    --PrimarryColor: rgb(93, 0,30);
+    --SecondaryColor: rgb(278, 76, 136);
+    --gradientColor: linear-gradient(to right, rgb(93, 0,30),rgb(278, 76, 136));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 0%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam:hsl(0, 17%, 98%);
+    --greyText:rgb(190,190,190);
+    --inputColor: rgb(239,239,239);
+    --bodycolor: #fff;
+    --cardBG: #efefef;
+
+    --biggestFontSize: 2.5rem;
+    --headingFontSize: 2rem;
+    --h1FontSize: 1.6rem;
+    --h2FontSize:1.25rem;
+    --h3FontSize:1rem;
+    --normalFontSize:0.938rem;
+    --smallFontSize:0.813rem;
+    --smallestFontSize:0.75rem;
+    --borderRadius:3rem;
+}
+.section{
+    padding-top: 4rem;
+}
+.package{
+    position: relative;
+    .secHeading{
+        text-align: center;
+        color: var(--SecondaryColor);
+        font-size: var(--h3FontSize);
+    }
+
+      &::after {
+    content: ""; /* Required to display the pseudo-element */
+    position: absolute;
+    left: 47%;
+    right: 50%;
+    top: 0;
+     transform: translateX(50%);
+    width: 2%;
+    height: 3px; 
+    background: var(--SecondaryColor); 
+    border-radius: 0 0 17px 17px; 
+}
+    .package-main{
+        gap: 4rem;
+    }
+    .singleDestination {
+        margin: 0;
+    height: 100%;
+    display: grid;
+    row-gap: 10px;
+    border-radius: 10px;
+    padding: 1rem;
+    align-items: center;
+    background: var(--whiteColor);
+    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+    overflow: hidden;
+
+    &:hover{
+        background: #efefef;
+    }
+}
+
+
+
+img {
+     width: 100%;
+    height: 200px; /* Set a fixed height or use a specific aspect ratio */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+    object-fit: cover; /* Ensures the image covers the container */
+    transition: transform 0.3s ease;
+}
+
+img:hover  {
+    transform: scale(1.1);  /* Smooth zoom effect on hover */
+}
+            .cardInfo{
+                .title{
+                    padding: .5rem;
+                    justify-content: space-between;
+                    border-bottom: var(--SecondaryColor) 1px solid;
+
+                    .title-main{
+                        h4{
+                            font-size: var(--h2FontSize);
+                            color: var(--PrimarryColor);
+                        }
+                        span{
+                            font-size: var(--h3FontSize);
+                            color: var(--PrimarryColor);
+                        }           
+                    }   
+                    .rate{
+                            font-size: var(--h2FontSize);
+                            font-weight: 600;
+                            color: var(--PrimarryColor);
+                        }       
+                }
+                .hotel{
+                    padding: .5rem;
+                    justify-content: space-between;
+                    border-bottom: var(--SecondaryColor) 1px solid;
+
+                    .title-hotel{
+                        h5{
+                            font-size: var(--h2FontSize);
+                            color: var(--PrimarryColor);
+                        }
+                        }
+                        .hotel-icon{
+                           h6{
+                            font-size: var(--h3FontSize);
+                            color: var(--PrimarryColor);
+
+                            .icon{
+                                font-size: var(--h3FontSize);
+                                color: gold;
+                            }
+                           }
+                    }
+                }
+                .desc{
+                        padding: 0.5rem;
+                        overflow: hidden;
+                        max-height: 100px; 
+                        transition: max-height 1s ease-out; 
+                        
+                        
+                        p{
+                            padding: .5rem;
+                            font-size: var(--h3FontSize);                           
+                        }
+
+                }
+                .desc.collapsed {
+                   max-height: 100px;
+                 }
+
+                .desc.expanded {
+                      max-height: 300px; 
+                   }
+                   
+                      .btn{
+                        padding-top: .3rem;
+                        padding-bottom: .3rem;
+                        padding-left: 3rem;
+                        padding-right: 3rem;
+                        margin-left: 10px;
+                        font-size: var(--h2FontSize);
+                        border-radius: 14px;
+                        justify-content: end;
+                      }
+            }
+    }
+@media screen and (max-width: 768px){
+        .secHeading{
+            justify-content: center;
+            h1{
+                font-size: var(--h1FontSize);
+            }
+        }
+    }
+@media screen and (min-width:768px){
+    .package-main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width:960px){
+    .package-main{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

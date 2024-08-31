@@ -1,0 +1,185 @@
+:root{
+    --PrimarryColor: rgb(93, 0,30);
+    --SecondaryColor: rgb(278, 76, 136);
+    --gradientColor: linear-gradient(to right, rgb(93, 0,30),rgb(278, 76, 136));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 0%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam:hsl(0, 17%, 98%);
+    --greyText:rgb(190,190,190);
+    --inputColor: rgb(239,239,239);
+    --bodycolor: #fff;
+    --cardBG: #efefef;
+
+    --biggestFontSize: 2.5rem;
+    --headingFontSize: 2rem;
+    --h1FontSize: 1.6rem;
+    --h2FontSize:1.25rem;
+    --h3FontSize:1rem;
+    --normalFontSize:0.938rem;
+    --smallFontSize:0.813rem;
+    --smallestFontSize:0.75rem;
+    --borderRadius:3rem;
+}
+.container2{
+    margin-top: 7rem;
+}
+.form{
+        .secHeading{
+            h1{
+                font-size: var(--h2FontSize);
+                color: var(--SecondaryColor);
+                text-align: center;
+            }
+        }
+        .image-content{
+            display: none;
+        }
+
+        form{
+            background-color: #efefef;
+            padding: 1rem;
+            border-radius: 17px;
+
+            .form-inputs{
+                padding: .5rem;
+                
+                label{
+                    font-size: var(--h3FontSize);
+                    font-weight: 600;
+                    color: var(--PrimarryColor);
+                }
+                input{
+                        margin-top: .6rem;
+                        border: none;
+                        background: none;
+                        padding: .5rem;
+                        background-color: var(--whiteColor);
+                        border-radius: var(--borderRadius);
+                        width: 100%;
+                        color: var(--SecondaryColor);
+                        &::placeholder{
+                            color: var(--SecondaryColor);
+                        }
+                        &:hover{
+                            outline: none;
+                            border: none;
+                        }
+                    }
+            }
+
+            .btn{
+                 width: 100%;
+                 text-align: center;
+                 margin-left: 0;
+                 margin-top: .8rem;
+                 }  
+                 .error{
+                    color: red;
+                    font-size: var(--smallFontSize);
+                 }  
+            }
+            span{
+                h3{
+                    font-size: .9rem;
+                    margin-top: 1rem;
+                    color: var(--PrimarryColor);
+                    font-weight: 400;
+                    text-align: center;
+
+                    .login-color{
+                        color: rgb(0, 0, 118);
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+@media screen and (max-width: 1024px){
+    .form{
+        padding: 4rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .form{
+        .content{
+            form{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1315px){
+    .form{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+}
+@media screen and (min-width: 1140px){
+    .form{
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
+}
+@media screen and (min-width: 1024px){
+    .form{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .form{
+    .content{
+            gap: 1rem;
+            border-radius: 20px;
+            background-color: var(--SecondaryColor);
+            margin: 0;
+            .image-content{
+                 width: 100%;
+                 display: block; /* Ensure the container is a block element */
+                 padding: 3rem;
+
+                 h4{
+                    color: var(--whiteColor);
+                    font-size: var(--h1FontSize);
+                    text-align: center;
+                 }
+
+            .imageDiv {
+                 width: 100%;
+                 overflow: hidden;
+                 padding-top: 5rem;
+                 padding-left: 5rem;
+                 padding-right: 5rem;
+                 
+                 
+
+                .imageDiv img{
+                aspect-ratio: 2 / 1; /* Maintain 2:1 aspect ratio */
+                width: 100%;
+                height: auto;
+                
+            }
+           
+        }
+
+        .explore-content{
+            margin-top: 3rem;
+            color: #efefef;
+
+            h2{
+                font-size: var(--h1FontSize);
+                font-weight: 400;
+            }
+        }
+    }
+        form{
+            width: 100%;
+            height: auto;
+            padding-top: 6rem;
+            padding-bottom: 5rem;
+        }
+    }
+    }
+}

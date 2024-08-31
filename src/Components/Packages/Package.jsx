@@ -3,7 +3,7 @@ import "./package.css"
 import axios from 'axios'
 import LazyLoad from 'react-lazyload'
 import { FaStar } from "react-icons/fa"
-import img from "../../Images/china.webp"
+import img from "../../Images/china visa 2.webp"
 import img2 from "../../Images/maldives.webp"
 import img3 from "../../Images/Singapore (1).webp"
 import img4 from "../../Images/Malaysia.webp"

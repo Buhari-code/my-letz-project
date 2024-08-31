@@ -1,0 +1,181 @@
+:root{
+    --PrimarryColor: rgb(93, 0,30);
+    --SecondaryColor: rgb(278, 76, 136);
+    --gradientColor: linear-gradient(to right, rgb(93, 0,30),rgb(278, 76, 136));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 0%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam:hsl(0, 17%, 98%);
+    --greyText:rgb(190,190,190);
+    --inputColor: rgb(239,239,239);
+    --bodycolor: #fff;
+    --cardBG: #efefef;
+
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.6rem;
+    --headingFontSize: 2rem;
+    --h2FontSize:1.25rem;
+    --h3FontSize:1rem;
+    --normalFontSize:0.938rem;
+    --smallFontSize:0.813rem;
+    --smallestFontSize:0.75rem;
+    --borderRadius:3rem;
+}
+
+.service{
+    padding: 4rem 4rem;
+
+    .secHeading{
+        justify-content: space-between;
+
+        p{
+        font-size: var(--headingFontSize);
+        font-weight: bold;
+        color: var(--SecondaryColor);
+        }
+        .flex{
+        background-color: #efefef;
+        border-radius: var(--borderRadius);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+        gap: .5rem;
+        transition: 1s ease-in-out;
+        &:hover{
+            background: var(--SecondaryColor);
+            .more{
+                color: var(--whiteColor);
+            }
+            span{
+                background-color: #efefef;
+            }
+        }
+
+        .more{
+            color: var(--blackColor);
+            font-weight: 600;
+        }
+         span{
+                background-color: var(--SecondaryColor);
+                padding-top: 1rem;
+                padding-bottom: .6rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                border-radius: 50%;
+
+                .icon{
+                    font-size: var(--h1FontSize);
+                }
+            }
+        }
+    }
+    .secContainer{
+        .secService{
+            background-color: #efefef;
+            padding: 1.4rem;
+            border-radius: 1rem;
+            transition: 1s ease-in-out;
+            &:hover{
+                background-color: var(--SecondaryColor);
+                .secContent{
+                    h3{
+                        color: var(--whiteColor);
+                    }
+
+                    p{
+                        color: var(--whiteColor);
+                    }
+
+                    h4{
+                        color: var(--whiteColor);
+                        .pink{
+                            color: var(--whiteColor);
+                        }
+                    }
+                }
+                .icon2{
+                    transform: rotate(360deg);
+                }
+            }
+
+            .icon2{
+                background-color: var(--whiteColor);
+                width: max-content;
+                border-radius: 50%;
+                padding: 1rem;
+                padding-bottom: .6rem;
+                transition: transform 0.3s ease-in-out;
+
+                .icon{
+                    font-size: var(--h1FontSize);
+                    
+                }
+            }
+
+            .secContent{
+                padding: .4rem;
+
+                h3{
+                    font-size: var(--h2FontSize);
+                    margin-top: .4rem;
+                    color: var(--PrimarryColor);
+                }
+
+                p{
+                    font-size: var(--normalFontSize);
+                    margin-top: .4rem;
+                }
+                h4{
+                    margin-top: 1rem;
+                    gap: .5rem;
+                    color: var(--SecondaryColor);
+                    width: max-content;
+                    .icon{
+                        margin-left: 10px;
+                    }
+                    .pink{
+                        color: var(--SecondaryColor);
+                    }
+                }
+            }
+        }
+            
+    }
+}
+
+@media screen and (max-width: 768px){
+    .service{
+        padding:2rem 2.2rem;
+        .secHeading{
+            justify-content: center;
+            p{
+                font-size: var(--h1FontSize);
+            }
+            .flex{
+                background: #fff;
+                &:hover{
+                    background-color: #fff;
+                }
+                .more{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px){
+    .service{
+        .secContainer{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media screen and (min-width: 1100px){
+    .service{
+        .secContainer{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

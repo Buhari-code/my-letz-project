@@ -1,0 +1,192 @@
+:root{
+    --PrimarryColor: rgb(93, 0,30);
+    --SecondaryColor: rgb(278, 76, 136);
+    --gradientColor: linear-gradient(to right, rgb(93, 0,30),rgb(278, 76, 136));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 0%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam:hsl(0, 17%, 98%);
+    --greyText:rgb(190,190,190);
+    --inputColor: rgb(239,239,239);
+    --bodycolor: #fff;
+    --cardBG: #efefef;
+
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 2rem;
+    --headingFontSize: 2rem;
+    --h2FontSize:1.25rem;
+    --h3FontSize:1rem;
+    --normalFontSize:0.938rem;
+    --smallFontSize:0.813rem;
+    --smallestFontSize:0.75rem;
+    --borderRadius:3rem;
+}
+
+.logo img{
+    aspect-ratio: 2 / 1;
+    width: 100px;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    top: 0;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    width:100%;
+    z-index: 1000;
+    background: rgb(255, 255, 255);
+}
+.btn1:hover{
+    background: var(--gradientColor);
+    border: none;
+    a{
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    
+    .navBar{
+        position: absolute;
+        background-color: #fff;
+        padding: 1rem;
+        height: max-content;
+        width: 100%;
+        top: 5.4rem;
+        left: -100%;
+        z-index: 2000;
+        transition: .5s ease-in-out;
+
+        .navLists{
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+            padding: .5rem 0;
+
+
+            .navItem{
+                padding: 1rem;
+
+
+                .navLink{
+                    color: var(--textColor);
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    padding: 0.5rem 2rem;
+                    border-radius: var(--borderRadius);
+                    transition: .5s ease-in-out;
+                    &:hover{
+                        color: var(--PrimarryColor);
+                        font-size: var(--h1FontSize);
+                       
+
+                    }
+
+                }
+            }   
+        }
+    }
+    .btn{
+        margin-top: 1rem;
+
+        a{
+            font-weight: 600;
+            color: var(--whiteColor);
+            font-size: 1.2rem;
+            
+        }
+    }
+    .btn1{
+        margin-top: 10px;
+
+        a{
+            font-weight: 600;
+            color: var(--textColor);
+            font-size: 1.2rem;
+        }
+    }
+    .btn1:hover{
+        background: var(--gradientColor);
+        border: none;
+        a{
+            color: #fff;
+        }
+    }
+    .toggleNavbar{
+        border: none;
+        outline: none;
+        background: none;
+
+        .icon{
+            font-size: 2rem;
+        }
+    }
+    .navBar.activeNavbar{
+        left: 0;
+     }
+     .bars{
+        display: none;
+     }
+
+}
+
+@media screen and (min-width: 769px){
+
+    .toggleNavbar{
+        display: none;
+    }
+    .closeNavbar{
+        display: none;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    .navItem{
+        .navLink{
+            color: var(--PrimarryColor);
+            padding: 0 0.45rem;
+            font-size: 0.9rem;
+            font-weight: 500; 
+            transition: .3s ease-in-out;
+            
+            &:hover{
+                background: var(--SecondaryColor);
+                padding: 0.6rem;
+                border-radius: 10px;
+                color: var(--whiteColor);
+            }
+        }
+    }
+    .btn{
+        width: max-content;
+        margin-left: 1rem;
+
+        a{
+            color: var(--whiteColor);
+            font-weight: 500;
+        }
+    }
+    .bar{
+        display: none;
+    }
+}
+@media screen and (min-width: 825px){
+    .navItem{
+        .navLink{
+            font-size: 1rem;
+        }
+}
+}
+
+@media screen and (min-width: 1024px){
+    .navItem{
+        .navLink{
+            font-size: 1.1rem;
+        }
+}
+}
+

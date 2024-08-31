@@ -1,0 +1,192 @@
+:root{
+    --PrimarryColor: rgb(93, 0,30);
+    --SecondaryColor: rgb(278, 76, 136);
+    --gradientColor: linear-gradient(to right, rgb(93, 0,30),rgb(278, 76, 136));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 0%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam:hsl(0, 17%, 98%);
+    --greyText:rgb(190,190,190);
+    --inputColor: rgb(239,239,239);
+    --bodycolor: #fff;
+    --cardBG: #efefef;
+
+    --biggestFontSize: 2.5rem;
+    --headingFontSize: 2rem;
+    --h1FontSize: 2rem;
+    --h2FontSize:1.25rem;
+    --h3FontSize:1rem;
+    --normalFontSize:0.938rem;
+    --smallFontSize:0.813rem;
+    --smallestFontSize:0.75rem;
+    --borderRadius:3rem;
+}
+.Home{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+
+
+  .videoDiv{
+    position: absolute;
+    top: 8%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding:1rem;
+
+      video{
+        position: relative;
+        top: 7%;
+        border-radius: var(--borderRadius);
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .sectionText{
+      position: absolute;
+      height: 100%;
+      top: 26%;
+      bottom: 50%;
+      color: var(--bodycolor);
+      padding: 0 1.3rem;
+      text-align: center;
+
+      h1{
+        font-size: var(--biggestFontSize);
+      }
+
+      p{
+        font-size: var(--biggestFontSize);
+        font-weight: 600;
+      }
+
+      .btn{
+        gap: .5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: max-content;
+        font-size: var(--h3FontSize);
+      }
+    }
+
+    .popularPlaces{
+      display: none;
+    }
+  }
+@media screen and (max-width: 1100px){
+  .sectionText{
+      transform: translateY(21%);
+  }
+}
+@media screen and (max-width: 380px) {
+  .Home{
+    .sectionText{
+      h1, p{
+        text-align: center;
+        font-size: 1.4rem;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .Home{
+    .sectionText{
+      padding: 2rem;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+
+      h1, p{
+        text-align: center;
+        font-size: 2rem;
+        margin: auto;
+      }
+
+      .btn{
+        font-size: var(--h3FontSize);
+        margin: auto;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px){
+  .Home{
+    .sectionText{
+      width: 100%;
+
+      h1, p{
+        font-size: 3rem;
+        margin: auto;
+      }
+
+      .btn{
+        gap: .5rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        font-size: var(--h3FontSize);
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px)
+{
+  .Home{
+    position: relative;
+
+
+    .popularPlaces{
+      display: block;
+      position: absolute;
+      bottom: 10%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content{
+          h3{
+            color: var(--whiteColor);
+            padding: 1rem 0;
+            position: relative;
+            &::after{
+              content: '';
+              width: 83%;
+              height: 2px;
+              background: rgb(202, 202, 202);
+              right: 0;
+              bottom: 50%;
+              position: absolute;
+            }
+          }
+
+        .images{
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            overflow: hidden;
+
+        img{
+           height: 120px;
+           width: 240px;
+           border-radius: 1rem;
+           object-fit: cover;
+           border-image-repeat: 10px;
+        }
+      }
+    }
+  }
+}
